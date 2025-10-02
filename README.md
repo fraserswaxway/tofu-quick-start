@@ -147,7 +147,7 @@ Following are some additional tips.
   faas-cli store deploy <function> 
 
 
-  (Example: **faas-cli store deploy nslookup**)
+  Example: faas-cli store deploy nslookup
 - Function deployments to OpenFaaS may take several seconds (consider waiting 30 seconds before performing a validation test)
 
 - View deployed OpenFaaS functions using **faas-cli list**
@@ -157,7 +157,7 @@ Following are some additional tips.
   curl -X POST http://<host_or_ip>:8080/function/<function_name> -d '<data>' 
 
 
-  (Example: curl -X POST http://localhost:8080/function/nslookup -d 'amazon.com')
+  Example: curl -X POST http://localhost:8080/function/nslookup -d 'amazon.com'
 - View the OpenFaaS pods using **kubectl get pods -n openfaas**
 
 ### About the Author
