@@ -1,18 +1,52 @@
 # Terraform (Tofu) Quick Start
 
-_<p style="text-align:center;">Abstract</p>_
-Many who have chosen a career related to 
-Computer Science (Information Technology) discover that 
-the field demands continuous learning. I embrace this 
+_Abstract_
+Computer Science (Information Technology) related 
+careers often require nearly continuous learning. I embrace this 
 aspect of my chosen field. Over the years of coding and
-product consulting,I've encountered a fair share 
-of tools for replacing manual steps with automation.
-In the Virtual Machine realm I encountered a lot of 
-use of [Ansible](#https://docs.ansible.com/). I eventually
-created a learning exercise for myself to better my
-Ansible skill set. Recently I have noticed an increased
-use of Infrastructure as Code (IaC). In particular the use
-of HashiCorp Cloud Platform (HCP). I decided to do some 
+product consulting,I've encountered a number 
+of tools used to replace manual steps with automation.
+Recently, I encountered a few uses of Infrastructure as Code (IaC)
+by some customers. In particular the use
+of HashiCorp Cloud Platform (HCP). I created an exercise
+for myself to refine my Terradata skill set. I will share 
+the exercise in this article.
+
+
+### Contents
+1. [Environment](#environment)
+1. [Folder](#folder)
+
+### 1. Environment <a id="environment"/>
+
+* Host: [Debian](https://www.debian.org/distrib/) 13.1.0
+* Docker: Community Edition, [Docker-CE](https://docs.docker.com/engine/install/)
+* IaC: [OpenTofu](#https://opentofu.org/docs/intro/install/)
+* Kubernetes: [KIND](https://kubernetes.io/docs/tasks/tools/)
+* Open Source Marketplace: [arkade](https://docs.openfaas.com/cli/install/)
+* Microservices Command Line: [OpenFaaS Community Edition Command Line](https://docs.openfaas.com/cli/install/)
+* Kubernetes CLI: [kubectl](https://kubernetes.io/docs/tasks/tools/)
+
+### 2. Folder <a id="folder"/>
+
+Create a working folder (example: tofu-quick-start) with the files
+and contents as shared at 
+[https://github.com/fraserswaxway/tofu-quick-start](#https://github.com/fraserswaxway/tofu-quick-start).
+
+```
+tofu-quick-start
+|-- main.tf
+|-- output.tf
+|-- provider.tf
+|-- terraform.tfvars
+`-- variables.tf
+```
+
+
+
+
+
+I decided to do some 
 personal skills development on this technology. Furthermore, I
 would create a problem statement to solve which would exercise 
 a number of [popular] skills at once. To this end I decided
@@ -22,18 +56,6 @@ available free software. I eventually settled on
 (KIND). I chose to use [OpenToFu](#https://opentofu.org/) 
 (drop-in replacement for [Terraform](#https://www.hashicorp.com/en/products/terraform)) to avoid costs.
 
-### Contents
-1. [Environment](#environment)
-
-### 1. Environment <a id="environment"/>
-* Host: [Debian](https://www.debian.org/distrib/) 13.1.0
-* Docker: Community Edition, [Docker-CE](https://docs.docker.com/engine/install/)
-* IaC: [OpenTofu](#https://opentofu.org/docs/intro/install/)
-
-* Kubernetes: [KIND](https://kubernetes.io/docs/tasks/tools/)
-* Open Source Marketplace: [arkade](https://docs.openfaas.com/cli/install/)
-* Microservices Command Line: [OpenFaaS Community Edition Command Line](https://docs.openfaas.com/cli/install/)
-* Kubernetes CLI: [kubectl](https://kubernetes.io/docs/tasks/tools/)
 * * 
 
 
