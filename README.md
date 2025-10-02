@@ -2,17 +2,13 @@
 
 ### Abstract
 
-Computer Science (Information Technology) related 
-careers often require nearly continuous learning. I embrace this 
-aspect of my chosen field. Over the years of coding and
-product consulting,I've encountered a number 
-of tools used to replace manual steps with automation.
-Recently, I encountered a few uses of Infrastructure as Code (IaC)
-by some customers. In particular the use
-of HashiCorp Cloud Platform (HCP). I created an exercise
-for myself to refine my Terradata skill set. I will share 
-the exercise in this article.
-
+Throughout my career there has been endless change and as a result endless learning. 
+I enjoy the challenge. Recently, I decided to refine my Infrastructure as Code (IaC) 
+skills by creating a project with the intent to write a simple how-to mixing Terradata (OpenTofu) 
+with KinD (Kubernetes in Docker) and a deployment of microservice using OpenFaaS Community Edition (CE).
+The end result is documented at https://fraserswaxway.github.io/tofu-quick-start/ and all the files are
+at https://github.com/fraserswaxway/tofu-quick-start. Most [somewhat] technical people should be 
+able to use the provided files and see a result in around 30 minutes.
 
 ### Contents
 1. [Environment](#environment)
