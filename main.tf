@@ -30,38 +30,11 @@ resource "null_resource" "port-forward" {
   }
 }
 
-resource "shell_script" "initialize" {
+resource "shell_script" "deploy" {
   depends_on = [null_resource.port-forward]
   lifecycle_commands {
     create = <<-EOF
-          sleep 5 # Wait a few seconds to make sure port forwarding is up
-          rm -rf ./docker port-forward.log faas-cluster-config template
-          mkdir -p ./docker
-		  cd ./docker
-          faas-cli new --lang dockerfile env
-		EOF
-    delete = <<-EOF
-          rm -f *state* port-forward.log faas-cluster-config
-		EOF
-  }
-}
-
-resource "docker_image" "env" {
-  depends_on = [shell_script.initialize]
-  name = "env"
-  build {
-    path = "./docker/env"
-    tag  = ["env:latest"]
-    label = {
-      author : "you"
-    }
-  }
-}
-
-resource "shell_script" "deploy" {
-  depends_on = [docker_image.env]
-  lifecycle_commands {
-    create = <<-EOF
+          sleep 30 # wait a little bit to let all processes and ports to settle
           faas-cli login -u admin -p $(kubectl -n openfaas get secret basic-auth -o jsonpath='{.data.basic-auth-password}' | base64 --decode)
           faas-cli store deploy env
           docker image rm -f $(sed -nE 's/.*(alpine:.*).*/\1/p' ./docker/env/Dockerfile)
