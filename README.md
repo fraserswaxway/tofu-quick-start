@@ -143,10 +143,10 @@ Following are some additional tips.
 - Validate OpenFaaS functions using
 
 
-  curl -X POST http://<host_or_ip>:8080/function/<function_name> -d \'<data>\'** 
+  curl -X POST http://<host_or_ip>:8080/function/<function_name> -d '<data>' 
 
 
-  (Example: curl -X POST http://localhost:8080/function/nslookup -d \'amazon.com\')
+  (Example: curl -X POST http://localhost:8080/function/nslookup -d 'amazon.com')
 - View the OpenFaaS pods using **kubectl get pods -n openfaas**
 
 ### About the Author
