@@ -17,12 +17,12 @@ the exercise in this article.
 ### Contents
 1. [Environment](#environment)
 2. [Folder and Files](#folder)
-3. [HashiCorp Configuration Language (HCL)](#hcl)
-- [Functions](#functions)
-- [Providers](#providers)
-- [Variables](#variables)
-- [Data](#data)
-- [eRsource](#resource)
+3. [HashiCorp Configuration Language (HCL)](#hcl)<br>
+3.1 [Functions](#functions)<br>
+3.2 [Providers](#providers)<br>
+3.3 [Variables](#variables)<br>
+3.4 [Data](#data)<br>
+3.5 [eRsource](#resource)<br>
 4. [Command Line Interface (CLI) - Apply](#apply)
 5. [cURL Validation](#curl)
 6. [Tips](#tips)
@@ -59,12 +59,12 @@ tofu-quick-start
 
 **[HCL](https://developer.hashicorp.com/terraform/language/syntax/configuration)** is used to specify (code) OpenTofu (Terraform).
 
-- Functions <a id="functions"/>
+#### 3.1 Functions <a id="functions"/>
 
 Terraform's built-in **[functions](https://opentofu.org/docs/language/functions/)** allow manipulation 
 and transformation of data within configuration.
 
-- Providers <a id="providers"/>
+#### 3.2 Providers <a id="providers"/>
 
 Terraform **[providers](https://opentofu.org/docs/language/providers/)**
 are tools for various platforms such as [Amazon Web Services](https://aws.amazon.com/what-is-aws/), 
@@ -79,7 +79,7 @@ The example includes a provider for [Kubernetes](https://kubernetes.io/docs/conc
 [provider.tf](https://github.com/fraserswaxway/tofu-quick-start/blob/main/provider.tf).
 
 
-- Variables <a id="variables"/>
+#### 3.3 Variables <a id="variables"/>
 
 Terraform **[variables](https://opentofu.org/docs/language/values/variables/)** allow customization without changing
 configuration files. 
@@ -88,12 +88,12 @@ The example includes a variable for the KinD image tag in the file
 [variables.tf](https://github.com/fraserswaxway/tofu-quick-start/blob/main/variables.tf).
 
 
-- Data <a id="data"/>
+#### 3.4 Data <a id="data"/>
 
 Use Terraform **[data](https://opentofu.org/docs/language/data-sources/)** to retrieve and access 
 information outside of the OpenTofu process.
 
-- Resource <a id="resource"/>
+#### 3.5 Resource <a id="resource"/>
 
 A Terraform **[resourc](https://opentofu.org/docs/language/resources/)** is used 
 to define an infrastructure object.
