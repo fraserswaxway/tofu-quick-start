@@ -132,7 +132,7 @@ Following are some additional tips.
 
 - The OpenFaaS Community Edition (CE) license limits what can be deployed to public images
 - Login to OpenFaaS CE is required to use most **faas-cli** commands
-- Login to OpenFaaS CE using **faas-cli login -u admin -p $(kubectl -n openfaas get secret basic-auth -o jsonpath='{.data.basic-auth-password}' | base64 --decode)**
+- Login to OpenFaaS CE using faas-cli login -u admin -p $(kubectl -n openfaas get secret basic-auth -o jsonpath='{.data.basic-auth-password}' | base64 --decode)
 - Use the command '**faas-cli store list**' to list OpenFaaS CE public images
 - Deploy additional OpenFaaS CE public images using '**faas-cli store deploy <function>**' (Example: **faas-cli store deploy nslookup**)
 - Function deployments to OpenFaaS may take several seconds (consider waiting 30 seconds before performing a validation test)
