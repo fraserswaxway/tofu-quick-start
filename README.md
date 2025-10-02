@@ -162,7 +162,7 @@ Following are some additional tips.
 
 ### About the Author
 
-Stuart Fraser has honorary Master of Science in Computer Science from Old Dominion University and is a 
+Stuart Fraser has a Master of Science in Computer Science from Old Dominion University and is a 
 consulting Principal Architect at [Axway](https://axway.com/).  
 
 ### Acknowledgements
