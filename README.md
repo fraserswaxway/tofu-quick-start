@@ -149,6 +149,7 @@ Following are some additional tips.
 
   (Example: **faas-cli store deploy nslookup**)
 - Function deployments to OpenFaaS may take several seconds (consider waiting 30 seconds before performing a validation test)
+
 - View deployed OpenFaaS functions using **faas-cli list**
 - Validate OpenFaaS functions using
 
