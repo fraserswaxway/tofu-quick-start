@@ -22,7 +22,7 @@ the exercise in this article.
 3.2 [Providers](#providers)<br>
 3.3 [Variables](#variables)<br>
 3.4 [Data](#data)<br>
-3.5 [eRsource](#resource)<br>
+3.5 [Resource](#resource)<br>
 4. [Command Line Interface (CLI) - Apply](#apply)
 5. [cURL Validation](#curl)
 6. [Tips](#tips)
