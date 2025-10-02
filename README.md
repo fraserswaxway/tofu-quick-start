@@ -134,7 +134,7 @@ Following are some additional tips.
 - Login to OpenFaaS CE is required to use most **faas-cli** commands
 
  
-  faas-cli login -u admin -p $(kubectl -n openfaas get secret basic-auth -o jsonpath='{.data.basic-auth-password}' | base64 --decode)
+  faas-cli login -u admin -p $(kubectl -n openfaas get secret basic-auth -o jsonpath='{.data.basic-auth-password}' \| base64 --decode)
 
 - Use the command '**faas-cli store list**' to list OpenFaaS CE public images
 - Deploy additional OpenFaaS CE public images using **faas-cli store deploy <function>** (Example: **faas-cli store deploy nslookup**)
