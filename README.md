@@ -25,19 +25,9 @@ the exercise in this article.
 - [eRsource](#resource)
 4. [Command Line Interface (CLI) - Apply](#apply)
 5. [cURL Validation](#curl)
-6. d
-7. d
-8. 
+6. [Tips](#tips)
 
-Command Line Interface (CLI) - Apply
-
-5. [Variables](#variables)
-6. [Data](#data)
-7. ss
-8. ddd
-9. 
-9 
-3. [Apply](#apply)
+Acknowledgements
 
 
 ### 1. Environment <a id="environment"/>
@@ -150,26 +140,12 @@ Following are some additional tips.
 - Validate OpenFaaS functions using **curl -X POST http://<host_or_ip>:8080/function/<function_name> -d '<data>'** (Example: **curl -X POST http://localhost:8080/function/nslookup -d 'amazon.com'**)
 - View the OpenFaaS pods using **kubectl get pods -n openfaas**
 
+### About the Author
 
+Stuart Fraser has honorary Master of Science in Computer Science from Old Dominion University and is a 
+consulting Principal Architect at [Axway](https://axway.com/).  
 
+### Acknowledgements
 
-
-- View deployed OpenFaaS functions with **kubectl get pods -n openfaas**
-
-
-faas-cli list
-
-
-
-curl -X POST http://localhost:8080/function/env -d ''
-
-
-**NOTES:**
-
-faas-cli login -u admin -p $(kubectl -n openfaas get secret basic-auth -o jsonpath='{.data.basic-auth-password}' | base64 --decode)
-faas-cli list
-faas-cli store list
-faas-cli store deploy env
-kubectl get pods -n openfaas
-
+Special thanks to [Axway](https://axway.com/) for affording and enabling skills development.
 
