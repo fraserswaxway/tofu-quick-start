@@ -21,7 +21,8 @@ able to use the provided files and see a result in around 30 minutes.
 3.5 [Resource](#resource)<br>
 4. [Command Line Interface (CLI) - Apply](#apply)
 5. [cURL Validation](#curl)
-6. [Tips](#tips)
+6. [Command Line Interface (CLI) - Destroy](#destroy)
+7. [Tips](#tips)
 
 Acknowledgements
 
@@ -114,6 +115,8 @@ tofu init -upgrade
 tofu apply -auto-approve
 ```
 
+**Note**, the use of **-auto-approve** avoids a prompt to continue after the plan is displayed.
+
 ### 5. cURL Validation<a id="curl"/>
 
 Use the following command to validate the microservice returns environment variable from the sample function. 
@@ -122,7 +125,20 @@ Use the following command to validate the microservice returns environment varia
 curl -X POST http://localhost:8080/function/env -d ''
 ```
 
-### 6. Tips<a id="tips"/>
+
+### 6. Command Line Interface (CLI) - Destroy<a id="destroy"/>
+
+Use the following commands to
+- Remove OpenFaaS Community Edition (CE) pods
+- Remove KinD cluster
+- Remove container images related to this exercise
+```
+tofu destroy -auto-approve
+```
+
+**Note**, again the use of **-auto-approve** avoids a prompt to continue after the plan is displayed.
+
+### 7. Tips<a id="tips"/>
 
 Following are some additional tips.
 
@@ -155,6 +171,7 @@ Following are some additional tips.
 
   Example: curl -X POST http://localhost:8080/function/nslookup -d 'amazon.com'
 - View the OpenFaaS pods using **kubectl get pods -n openfaas**
+
 
 ### About the Author
 
